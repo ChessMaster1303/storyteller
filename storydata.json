@@ -1,0 +1,46 @@
+{
+    "plot": "You are exploring a world. Almost every scene is normal, but if the hero explores enough of the normal parts (eg more than 10 scenes), they will slowly start to uncover the mysterious parts. Most of the tone is simply setting a beautiful and uplifting landscape filled with wonder.",
+    "scenes": {
+        "start": {
+            "text": "You are standing at the end of a road before a small brick building. A small stream flows out of the building and down a gully to the south. A road runs up a small hill to the west.",
+            "scene_summary": "Start of the story. Standing in front of a brick building.",
+            "choices": [
+                {
+                    "text": "Take the road up the hill",
+                    "scene_key": "overlooking_valley"
+                },
+                {
+                    "text": "Walk up to the stream",
+                    "scene_key": "next_to_gully"
+                },
+                {
+                    "text": "Knock on the door",
+                    "scene_key": "knocking_on_small_brick_building"
+                }
+            ]
+        },
+        "overlooking_valley": {
+            "text": "Over the valley lies some pastures where cows graze. The pastures go as far as the eye can see, eventually merging with the horizon.",
+            "scene_summary": "Looking over the valley.",
+            "choices": [
+                {
+                    "text": "Go back to the brick building",
+                    "scene_key": "start"
+                }
+            ]
+        },
+        "next_to_gully": {
+            "text": "The gully seems to have some construction works right now. A partiall"
+        },
+        "knocking_on_small_brick_building": {
+            "text": "You knock on the door, but no one answers. You hear a faint sound of a dog barking from inside.",
+            "scene_summary": "Nobody answers.",
+            "choices": [
+                {
+                    "text": "Go back to the start",
+                    "scene_key": "start"
+                }
+            ]
+        }
+    }
+}
