@@ -20,7 +20,8 @@ def newScenePrint(scene_description, choices):
     print(scene_description)
     choiceCounter = 0
     for choice in choices:
-        print(str(choiceCounter + 1) + ": " + choice["text"])
+        print(str(choiceCounter + 1) + ": " + str(choice["text"]))
+        choiceCounter += 1
 
     userChoice = int(input("What option do you choose? *USER INPUT: "))
     validity = checkValidChoice(userChoice, choiceCounter)
@@ -32,6 +33,7 @@ def newScenePrint(scene_description, choices):
             print("--------------------------------")
             input("Press ENTER to exit the program")
         else:
+            print("----------------------------------")
             newSceneDescription = story_data["scenes"][newSceneKey]["text"]
             newSceneChoices = story_data["scenes"][newSceneKey]["choices"]
             newScenePrint(newSceneDescription, newSceneChoices)
@@ -42,4 +44,4 @@ def newScenePrint(scene_description, choices):
 
 
 #Start with the "start" scene
-newScenePrint(story_data["scenes"]["start"]["text"], story_data["scenes"]["choices"]["text"])
+newScenePrint(story_data["scenes"]["start"]["text"], story_data["scenes"]["start"]["choices"])
