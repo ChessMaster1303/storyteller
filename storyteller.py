@@ -2,10 +2,15 @@
 from dead_end_finder import find_dead_ends
 dead_ends = find_dead_ends()
 
+#For aesthetic terminal-line horizontal rule
+import os
+term_size = os.get_terminal_size()
+
 #Opening story with the plot
 import json
 story_data = json.load(open('story_data.json'))
 print(story_data["plot"])
+print('=' * term_size.columns)
 
 
 def checkValidChoice(userChoice, choiceCounter):
@@ -31,11 +36,12 @@ def newScenePrint(scene_description, choices):
         #print("New Scene Key: " + str(choices[userChoice - 1]["scene_key"]))
         
         if(newSceneKey in dead_ends):
-            print("Welp, time to find ChatGPT")
-            print("--------------------------------")
+            print('=' * term_size.columns)
+            print("We don't have scene data for scene key: " + str(newSceneKey))
+            print("This is the place where we shall put ChatGPT stuff")
             input("Press ENTER to exit the program")
         else:
-            print("----------------------------------")
+            print('=' * term_size.columns)
             newSceneDescription = story_data["scenes"][newSceneKey]["text"]
             newSceneChoices = story_data["scenes"][newSceneKey]["choices"]
             newScenePrint(newSceneDescription, newSceneChoices)

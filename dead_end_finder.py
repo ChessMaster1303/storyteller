@@ -1,3 +1,5 @@
+#This file just contains a function to be used in the main storyteller.py app
+#This function is used to determine, according to our current story_data.json, which scenes (dead ends) would require ChatGPT to generate new scene info
 def find_dead_ends():
     import json
     story_data = json.load(open('story_data.json'))
