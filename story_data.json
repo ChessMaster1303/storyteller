@@ -26,6 +26,10 @@
                 {
                     "text": "Go back to the brick building",
                     "scene_key": "start"
+                },
+                {
+                    "text": "Keep walking through the pastures",
+                    "scene_key": "lost_in_pastures"
                 }
             ]
         },
@@ -44,8 +48,8 @@
             "scene_summary": "Nobody answers.",
             "choices": [
                 {
-                    "text": "Go back to the start",
-                    "scene_key": "start"
+                    "text": "Break down the door",
+                    "scene_key": "break_down_door"
                 }
             ]
         }
