@@ -30,7 +30,14 @@
             ]
         },
         "next_to_gully": {
-            "text": "The gully seems to have some construction works right now. A partiall"
+            "text": "The gully seems to have some construction works right now. A partially collapsed bridge lay unmaintained, preventing you from crossing the gully.",
+            "scene_summary": "Collapsed gully.",
+            "choices": [
+                {
+                    "text": "Go back to the brick building",
+                    "scene_key": "start"
+                }
+            ]
         },
         "knocking_on_small_brick_building": {
             "text": "You knock on the door, but no one answers. You hear a faint sound of a dog barking from inside.",
