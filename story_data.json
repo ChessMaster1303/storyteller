@@ -50,6 +50,10 @@
                 {
                     "text": "Break down the door",
                     "scene_key": "break_down_door"
+                },
+                {
+                    "text": "Uhh, be civilised and don't break down the door",
+                    "scene_key": "start"
                 }
             ]
         }

@@ -27,7 +27,9 @@ def newScenePrint(scene_description, choices):
     validity = checkValidChoice(userChoice, choiceCounter)
 
     if(validity == True):
-        newSceneKey = choice["scene_key"]
+        newSceneKey = choices[userChoice - 1]["scene_key"]
+        #print("New Scene Key: " + str(choices[userChoice - 1]["scene_key"]))
+        
         if(newSceneKey in dead_ends):
             print("Welp, time to find ChatGPT")
             print("--------------------------------")
