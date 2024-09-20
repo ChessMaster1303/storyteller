@@ -1,12 +1,6 @@
-#Some dependencies to use the OpenAI API
-!pip install -U openai
-import openai
-from openai import OpenAI
-
 #Know the dead ends in the story, and hence know when to call ChatGPT
 from dead_end_finder import find_dead_ends
-dead_ends = fin
-
+dead_ends = find_dead_ends()
 
 #For aesthetic terminal-line horizontal rule
 import os
@@ -60,15 +54,8 @@ def newScenePrint(scene_description, choices):
            validity = checkValidChoice(userChoice, choiceCounter)
 
 
-def callAI():
-
-
-def initialiseAI():
-    
-
-
 def playGame():
-    OPENAI_API_KEY = str(input("Please input API Key for Gen AI Storytelling: "))
-
     #Start with the "start" scene
-    #newScenePrint(story_data["scenes"]["start"]["text"], story_data["scenes"]["start"]["choices"])
+    newScenePrint(story_data["scenes"]["start"]["text"], story_data["scenes"]["start"]["choices"])
+
+playGame()
